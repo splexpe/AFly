@@ -1,0 +1,11 @@
+name: AFly
+main: AvionMoine10575\AFly\Main
+api: 3.0.0
+version: 1.0.0
+author: AvionMoine10575
+commands:
+  fly:
+    description: "Fly stay activate in any ways without perms!"
+permissions:
+  fly.command:
+    default: op
