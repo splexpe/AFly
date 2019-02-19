@@ -17,7 +17,6 @@ class Main extends PluginBase implements Listener{
         if(is_dir(($dir = $this->getDataFolder())) == false) mkdir($dir);
         $this->cfg = new Config($dir."config.yml", Config::YAML, [
 	        "fly_command.on" => '&aYou just Enabled Your &6Fly!',
-	        'fly_eventHit_disabled' => '&cNo &6Fly&c in PvP!',
 	        "fly_command.off" => '&6Fly &cdisabled!',
 	        "fly_noPermission" => "&cYou don't have permission to use this command!",
         ]);
@@ -59,7 +58,6 @@ class Main extends PluginBase implements Listener{
         	if(!in_array($event->getCause(), $rejectedCauses)){
 		        $entity->setFlying(false);
 		        $entity->setAllowFlight(false);
-		        $entity->sendMessage(TextFormat::colorize($this->cfg->get("fly_eventHit_disabled")));        
             }
         }
     }
